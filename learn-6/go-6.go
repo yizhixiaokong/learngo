@@ -48,7 +48,7 @@ func main() {
 			ch <- i
 		}
 		close(ch)
-	}()
+	}() //闭包
 
 	for ii := range ch {
 		fmt.Println(ii)
