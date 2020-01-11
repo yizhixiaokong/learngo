@@ -1,3 +1,3 @@
-module learn-2
+module go-2
 
 go 1.13
