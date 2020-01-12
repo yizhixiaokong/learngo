@@ -18,8 +18,12 @@ func greet(w http.ResponseWriter, r *http.Request) {
 		fmt.Println("key:", k)
 		fmt.Println("val:", strings.Join(v, ""))
 	}
-
 	fmt.Fprintf(w, "Hello World! %s", time.Now()) //输出到客户端的信息
+
+
+	name:=r.FormValue("name")
+	pass:=r.FormValue("pass")
+	w.Write([]byte("\n"+name+"   "+pass))//也是输出到客户端页面
 }
 
 func main() {
